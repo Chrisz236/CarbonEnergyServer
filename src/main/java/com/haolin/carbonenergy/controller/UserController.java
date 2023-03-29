@@ -9,23 +9,23 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/carbonEnergy")
+@RequestMapping("/carbon-energy")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/saveOrUpdateUser")
+    @PostMapping("/save-user")
     public String saveUser(@RequestBody User user) {
         userRepository.save(user);
-        return "User saved with username: " + user.getUsername() + "; energy: " + user.getEnergy();
+        return "user saved with id: " + user.getId() + "; energy: " + user.getEnergy() + "; trees: " + user.getTreesPlanted();
     }
 
-    @GetMapping("/findAllUsers")
+    @GetMapping("/find-user")
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    @GetMapping("/findAllUsers/{id}")
+    @GetMapping("/find-user/{id}")
     public Optional<User> getUser(@PathVariable String id) {
         return userRepository.findById(id);
     }

@@ -8,33 +8,25 @@ public class User {
     @Id
     private String id;
 
-    private String username;
     private int energy;
+    private int trees_planted;
 
-    public User(String id, String username, int energy) {
+    public User(String id, int energy, int trees_planted) {
         this.id = id;
-        this.username = username;
         this.energy = energy;
+        this.trees_planted = trees_planted;
     }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public int getEnergy() {
         return energy;
+    }
+
+    public int getTreesPlanted() {
+        return trees_planted;
     }
 
     public void setEnergy(int energy) {
