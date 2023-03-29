@@ -9,12 +9,13 @@ public class User {
     private String id;
 
     private int energy;
-    private int trees_planted;
 
-    public User(String id, int energy, int trees_planted) {
+    private int treesPlanted;
+
+    public User(String id, int energy, int treesPlanted) {
         this.id = id;
         this.energy = energy;
-        this.trees_planted = trees_planted;
+        this.treesPlanted = treesPlanted;
     }
 
     public String getId() {
@@ -26,7 +27,7 @@ public class User {
     }
 
     public int getTreesPlanted() {
-        return trees_planted;
+        return treesPlanted;
     }
 
     public void setEnergy(int energy) {
